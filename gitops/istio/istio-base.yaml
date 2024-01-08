@@ -24,3 +24,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  # To ignore https://github.com/argoproj/argo-cd/issues/9323
+  ignoreDifferences:
+    - group: admissionregistration.k8s.io
+      kind: ValidatingWebhookConfiguration
+      name: istiod-default-validator
+      jsonPointers:
+        - /webhooks/0/failurePolicy
