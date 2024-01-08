@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rifqoi/xendok-infra.git
+    targetRevision: main
+    path: gitops/istio
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: istio-systm
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
