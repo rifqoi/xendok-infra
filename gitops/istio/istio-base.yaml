@@ -13,7 +13,7 @@ spec:
     targetRevision: 1.20.1
     helm:
       valueFiles:
-        - values/istio-base.yaml
+        - gitops/istio/values/istio-base.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
