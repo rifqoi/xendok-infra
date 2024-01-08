@@ -1,0 +1,9 @@
+global:
+  istioNamespace: istio-system
+
+telemetry:
+  enabled: true
+
+meshConfig:
+  ingressService: istio-gateway
+  ingressSelector: gateway
