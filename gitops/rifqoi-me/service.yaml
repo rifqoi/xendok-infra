@@ -4,11 +4,11 @@ kind: Service
 metadata:
   labels:
     visualize: "true"
-  name: rifqoi-me-service
+  name: rifqoi-me
   namespace: rifqoi-me
 spec:
   selector:
-    app: rifqoi-me-deploy
+    app: rifqoi-me
   ports:
     - name: http
       protocol: TCP
