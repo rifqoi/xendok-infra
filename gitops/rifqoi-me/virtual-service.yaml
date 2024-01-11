@@ -14,6 +14,6 @@ spec:
     - match:
         - uri:
             prefix: /
-    - route:
+      route:
         - destination:
             host: rifqoi-me
