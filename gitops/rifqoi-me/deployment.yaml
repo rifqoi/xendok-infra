@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rifqoi-me-deploy
+  name: rifqoi-me
   namespace: rifqoi-me
 spec:
   replicas: 1
