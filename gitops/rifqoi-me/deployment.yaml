@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rifqoi-me-deploy
+  namespace: rifqoi-me
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rifqoi-me-deploy
+  template:
+    metadata:
+      labels:
+        app: rifqoi-me-deploy
+        visualize: "true"
+    spec:
+      containers:
+        - name: rifqoi-me-pod
+          image: rifqoi/rifqoi.me
+          ports:
+            - containerPort: 4321

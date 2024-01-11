@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rifqoi-me
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rifqoi/xendok-infra.git
+    targetRevision: main
+    path: gitops/rifqoi-me
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: rifqoi-me
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
