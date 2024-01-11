@@ -6,8 +6,14 @@ metadata:
   namespace: rifqoi-me
 spec:
   hosts:
+    - rifqoi.me
     - rifqoi-me
+  gateways:
+    - rifqoi-me-gateway
   http:
+    - match:
+        - uri:
+            prefix: /
     - route:
         - destination:
             host: rifqoi-me
