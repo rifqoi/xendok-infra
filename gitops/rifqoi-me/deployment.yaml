@@ -15,7 +15,7 @@ spec:
         visualize: "true"
     spec:
       containers:
-        - name: rifqoi-me-pod
+        - name: rifqoi-me
           image: rifqoi/rifqoi.me
           ports:
             - containerPort: 4321
