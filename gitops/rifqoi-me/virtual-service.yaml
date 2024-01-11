@@ -1,0 +1,13 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: rifqoi-me-vs
+  namespace: rifqoi-me
+spec:
+  hosts:
+    - rifqoi-me
+  http:
+    - route:
+        - destination:
+            host: rifqoi-me
